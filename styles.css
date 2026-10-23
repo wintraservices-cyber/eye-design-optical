@@ -65,7 +65,7 @@ p{margin:0}
 @keyframes draw{to{transform:scaleX(1)}}
 
 .hero-grid{display:grid;gap:clamp(24px,4vw,56px);grid-template-columns:1fr}
-@media (min-width:980px){.hero-grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);align-items:end}}
+@media (min-width:980px){.hero-grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);align-items:center}}
 
 .chart{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,4vw,44px) clamp(18px,4vw,44px) 20px;box-shadow:0 0 0 8px #fff,0 30px 60px -40px rgba(22,33,58,.45)}
 .chart-rows{display:block;font:inherit;margin:0}
@@ -191,6 +191,7 @@ p{margin:0}
 
 /* chat */
 .chat-fab{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;align-items:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;border:0;background:var(--ink);color:#fff;font:700 .98rem var(--display);cursor:pointer;box-shadow:0 12px 30px -10px rgba(22,33,58,.6)}
+@media (max-width:520px){.chat-fab{min-height:46px;padding:0 16px;font-size:.9rem}.chat-fab .fab-long{display:none}}
 .chat-dot{width:10px;height:10px;border-radius:50%;background:#4CC38A;box-shadow:0 0 0 0 rgba(76,195,138,.6);animation:pulse 2.4s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(76,195,138,0)}100%{box-shadow:0 0 0 0 rgba(76,195,138,0)}}
 .chat{position:fixed;right:16px;bottom:16px;z-index:45;width:min(380px,calc(100vw - 32px));height:min(560px,calc(100dvh - 32px));background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 70px -20px rgba(22,33,58,.45);display:flex;flex-direction:column;overflow:hidden}
@@ -245,10 +246,11 @@ tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
 /* pitch */
 .phases{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:0;border-top:2px solid var(--ink);counter-reset:ph}
 .phases>li{display:grid;gap:12px;padding:28px 0;border-bottom:1px solid var(--line);counter-increment:ph}
-@media (min-width:860px){.phases>li{grid-template-columns:5rem minmax(0,1fr) minmax(0,1.3fr);gap:28px}}
+@media (min-width:860px){.phases>li{grid-template-columns:4rem minmax(0,1fr) minmax(0,1.5fr);gap:28px}}
 .phases>li::before{content:counter(ph);font:900 2.6rem/1 var(--display);font-stretch:120%;color:var(--red)}
 .phases h3{font-size:1.4rem;font-stretch:110%}
 .phases .when{display:block;margin-top:6px;font:500 .92rem var(--display);color:var(--slate)}
+.ph-body{display:grid;gap:14px}
 .phases ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
 .proof{display:grid;gap:24px;margin-top:28px}
 @media (min-width:900px){.proof{grid-template-columns:1.1fr 1fr;align-items:center}}
