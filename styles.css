@@ -39,7 +39,8 @@ p{margin:0}
 .top{max-width:var(--max);margin:0 auto;padding:18px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:2px solid var(--ink);border-radius:var(--r-sm);font:900 1.4rem/1 var(--display);font-stretch:125%;background:var(--panel)}
-.brand-name{font:800 1.05rem/1.05 var(--display);font-stretch:110%}
+.brand-name{font:800 1.05rem/1.15 var(--display);font-stretch:108%;max-width:14ch}
+@media (min-width:520px){.brand-name{max-width:none}}
 .brand-name small{font-weight:500;font-size:.78rem;color:var(--slate);font-stretch:100%}
 .top nav{display:flex;align-items:center;gap:22px;font:500 .95rem var(--display)}
 .top nav a:not(.btn){text-decoration:none}
