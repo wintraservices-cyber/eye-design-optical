@@ -38,6 +38,8 @@ p{margin:0}
 /* header */
 .top{max-width:var(--max);margin:0 auto;padding:18px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-logo{display:block;height:46px;width:auto;background:#fff;border-radius:var(--r-sm);padding:4px 6px;border:1px solid var(--line)}
+.foot-logo{width:140px;height:auto;margin-bottom:8px;border-radius:var(--r-sm)}
 .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:2px solid var(--ink);border-radius:var(--r-sm);font:900 1.4rem/1 var(--display);font-stretch:125%;background:var(--panel)}
 .brand-name{font:800 1.05rem/1.15 var(--display);font-stretch:108%;max-width:14ch}
 @media (min-width:520px){.brand-name{max-width:none}}
@@ -45,6 +47,8 @@ p{margin:0}
 .top nav{display:flex;align-items:center;gap:22px;font:500 .95rem var(--display)}
 .top nav a:not(.btn){text-decoration:none}
 @media (max-width:760px){.top nav a:not(.btn){display:none}}
+.show-sm{display:none}
+@media (max-width:480px){.hide-sm{display:none}.show-sm{display:inline}.brand-logo{height:40px}}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:700 1rem var(--display);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,transform .15s}
